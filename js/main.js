@@ -4,8 +4,8 @@ let splashScreenNode = document.querySelector("#splash-screen")
 let gameScreenNode = document.querySelector("#game-screen")
 let gameBoxNode = document.querySelector("#game-box")
 
-
-
+let gameObject;
+ 
 
 // * STATE MANAGEMENT FUNCTIONS
 const startGame = () => {
@@ -14,7 +14,7 @@ const startGame = () => {
 
   // creariamos nuestro gameLoop
   // iniciariamos el gameLoop
-  let gameObject = new Game()
+   gameObject = new Game()
   console.log(gameObject)
 
   gameObject.gameLoop()
@@ -27,6 +27,12 @@ const startGame = () => {
 
 // * EVENT LISTENERS
 startBtnNode.addEventListener("click", startGame)
+document.addEventListener("keydown", (event) => {
+  if (event.code === "Space") {
+    // console.log("intenta hacer saltar al pollo")
+    gameObject.pollito.jump()
+  }
+})
 
 
 

@@ -9,9 +9,8 @@ class Game {
     this.pollito = new Pollito()
 
     // obstaculos
-      // nodo
-      // dimensiones de obstaculos
-      // velocidad del obstaculos
+    this.oneObstacle = new Obstacle()
+
 
     // timer
     this.timer = 0; // 60 veces por segundo
@@ -23,7 +22,7 @@ class Game {
 
 
   // aparecer y desaparecer de los obstaculos
-  // movimiento de los obstaculos
+  
   
   // gameLoop
   gameLoop = () => {
@@ -31,6 +30,7 @@ class Game {
     this.timer++
     // console.log(this.timer)
 
+    this.pollito.gravityEffect()
 
     // recursion
     requestAnimationFrame( this.gameLoop )

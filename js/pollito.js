@@ -16,16 +16,41 @@ class Pollito {
     // ajustar los valores en el DOM
     this.node.style.width = `${this.w}px`
     this.node.style.height = `${this.h}px`
+    this.node.style.position = "absolute" // para poder posicionar al pollito en el eje X o Y
     this.node.style.left = `${this.x}px`
     this.node.style.top = `${this.y}px`
-    this.node.style.position = "absolute" // para poder posicionar al pollito en el eje X o Y
 
 
     // velocidad del pollito
+    this.gravitySpeed = 2.2;
+    this.jumpSpeed = 35;
   }
 
-  // salto del pollito
   // efecto de gravedad al pollito
+  gravityEffect = () => {
+    // console.log("efecto de gravedad")
+
+    this.y += this.gravitySpeed; // actualiza el valor
+    this.node.style.top = `${this.y}px` // actualiza el DOM
+
+    // Bonus. podrian crear un condicional que no permite que salte si está por arriba del game-box
+
+  }
+
+  // salto del pollito  
+  jump = () => {
+
+    this.y -= this.jumpSpeed
+    this.node.style.top = `${this.y}px` // actualiza el DOM
+
+    // si quieren un salto más progresivo
+    // crear un booleano que dice si el pollito está saltando o no
+    // cambiar el booleano a true y 3 segundos despues lo cambia a false
+    // el salto estará en el gameLoop
+
+  }
+
+
   // colision de los obstaculos con el pollito
 
 }
