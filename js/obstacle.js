@@ -15,7 +15,7 @@ class Obstacle {
     // dimensiones de obstaculos
     this.w = 60 // weight => ancho
     this.h = 200 // heigth => alto
-    this.x = 540 // posicion en el eje X (desde la derecha)
+    this.x = 600 // posicion en el eje X (desde la derecha)
     this.y = yPosition // posicion en el eje Y (desde arriba)
     // aleatorio entre -100 y 0
 

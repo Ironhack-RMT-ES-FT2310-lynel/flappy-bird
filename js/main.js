@@ -3,6 +3,7 @@ let startBtnNode = document.querySelector("#start-btn")
 let splashScreenNode = document.querySelector("#splash-screen")
 let gameScreenNode = document.querySelector("#game-screen")
 let gameBoxNode = document.querySelector("#game-box")
+let gameOverScreenNode = document.querySelector("#gameover-screen")
 
 let gameObject;
  
